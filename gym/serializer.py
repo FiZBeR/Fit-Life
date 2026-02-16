@@ -17,6 +17,8 @@ class ClaseSerializer (serializers.ModelSerializer):
 
         if(value < ahora):
             raise serializers.ValidationError('La clases no pueden ser programadas en dias posteriores a la fecha actual')
+
+        return value
         
 class ReservaSerializer (serializers.ModelSerializer):
     class Meta:
